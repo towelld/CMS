@@ -17,11 +17,6 @@ view: records {
           {% endif %} ;;
   }
 
-  dimension: amount_currency {
-    type: string
-    sql: ${TABLE}.AmountCurrency ;;
-  }
-
   dimension: amount_eur {
     label: "Amount EUR"
     type: number

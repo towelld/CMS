@@ -66,7 +66,7 @@ view: running_balance {
 
   dimension_group: post {
     type: time
-    timeframes: [date, week, month]
+    timeframes: [month, week, date, time, hour]
     convert_tz: no
     sql: ${TABLE}.PostDate ;;
   }

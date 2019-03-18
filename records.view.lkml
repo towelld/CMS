@@ -215,6 +215,7 @@ view: records {
           {% endif %} ;;
   }
   measure: sum_amount_eur {
+    label: "Sum Amount EUR"
     type: sum
     sql: ${amount_eur};;
     value_format: "#,##0.00"
@@ -226,6 +227,7 @@ view: records {
     {% endif %} ;;
   }
   measure: sum_amount_gbp {
+    label: "Sum Amount GBP"
     type: sum
     sql: ${amount_gbp};;
     value_format: "#,##0.00"
@@ -237,6 +239,7 @@ view: records {
     {% endif %} ;;
   }
   measure: sum_amount_usd {
+    label: "Sum Amount USD"
     type: sum
     sql: ${amount_usd};;
     value_format: "#,##0.00"

@@ -358,6 +358,53 @@ view: records {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [cash_record*]
+  }
+  measure: count_percent {
+    type: percent_of_total
+    sql: ${count};;
+    drill_fields: [cash_record*]
+  }
+  measure: sum_amount {
+    type: sum
+    sql: ${amount};;
+    value_format_name: decimal_2
+    drill_fields: [cash_record*]
+    html: {% if records.sum_amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+  }
+  measure: average_amount {
+    type: average
+    sql: ${amount};;
+    drill_fields: [cash_record*]
+  }
+  measure: sum_amount_usd {
+    type: sum
+    sql: ${amount_usd};;
+    value_format: "#,##0.00"
+    drill_fields: [cash_record*]
+  }
+  measure: count_matched {
+    type: sum
+    sql: ${TABLE}.ActiveStatus;;
+    drill_fields: [cash_record*]
+  }
+
+  set: cash_record {
+    fields: [
+      subsidiary,
+      bank,
+      currency,
+      account_no,
+      amount,
+      post_date_time,
+      value_date,
+      reference1,
+      reference2,
+      reference3
+    ]
   }
 }

@@ -6,19 +6,15 @@ view: records {
     sql: ${TABLE}.AccountNo ;;
   }
 
-  dimension: active_status {
-    type: number
-    sql: ${TABLE}.ActiveStatus ;;
-  }
-
-  dimension: allow_purge {
-    type: string
-    sql: ${TABLE}.AllowPurge ;;
-  }
-
   dimension: amount {
     type: number
     sql: ${TABLE}.Amount ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: amount_currency {
@@ -29,7 +25,13 @@ view: records {
   dimension: amount_eur {
     type: number
     sql: ${TABLE}.AmountEUR ;;
-  }
+    value_format: "#,##0.00"
+    html: {% if records.amount_eur._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+}
 
   dimension: amount_eurcurrency {
     type: string
@@ -39,6 +41,12 @@ view: records {
   dimension: amount_gbp {
     type: number
     sql: ${TABLE}.AmountGBP ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount_gbp._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: amount_gbpcurrency {
@@ -59,6 +67,12 @@ view: records {
   dimension: amount_usd {
     type: number
     sql: ${TABLE}.AmountUSD ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount_usd._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: amount_usdcurrency {
@@ -273,27 +287,9 @@ view: records {
 
   dimension_group: post {
     type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
+    timeframes: [date, week, month, time]
     convert_tz: no
-    datatype: date
-    sql: ${TABLE}.PostDate ;;
-  }
-
-  dimension: post_date_time {
-    type: string
     sql: ${TABLE}.PostDateTime ;;
-  }
-
-  dimension: post_time {
-    type: string
-    sql: ${TABLE}.PostTime ;;
   }
 
   dimension: reference1 {
@@ -321,11 +317,6 @@ view: records {
     sql: ${TABLE}.Subsidiary ;;
   }
 
-  dimension: system {
-    type: string
-    sql: ${TABLE}.System ;;
-  }
-
   dimension: transaction_code {
     type: string
     sql: ${TABLE}.TransactionCode ;;
@@ -334,11 +325,6 @@ view: records {
   dimension: transaction_status {
     type: number
     sql: ${TABLE}.TransactionStatus ;;
-  }
-
-  dimension: ultimate_parent_pk {
-    type: string
-    sql: ${TABLE}.UltimateParentPk ;;
   }
 
   dimension_group: value {
@@ -417,7 +403,7 @@ view: records {
       currency,
       account_no,
       amount,
-      post_date_time,
+      post_date,
       value_date,
       reference1,
       reference2,

@@ -368,7 +368,7 @@ view: records {
   measure: sum_amount {
     type: sum
     sql: ${amount};;
-    value_format_name: decimal_2
+    value_format: "#,##0.00"
     drill_fields: [cash_record*]
     html: {% if records.sum_amount._value < 0 %}
                 <font color="#df5555">{{ rendered_value }}</font>
@@ -376,21 +376,38 @@ view: records {
                 <font color="#000000">{{ rendered_value }}</font>
           {% endif %} ;;
   }
-  measure: average_amount {
-    type: average
-    sql: ${amount};;
+  measure: sum_amount_eur {
+    type: sum
+    sql: ${amount_eur};;
+    value_format: "#,##0.00"
     drill_fields: [cash_record*]
+    html: {% if records.sum_amount_eur._value < 0 %}
+    <font color="#df5555">{{ rendered_value }}</font>
+    {% else %}
+    <font color="#000000">{{ rendered_value }}</font>
+    {% endif %} ;;
+  }
+  measure: sum_amount_gbp {
+    type: sum
+    sql: ${amount_gbp};;
+    value_format: "#,##0.00"
+    drill_fields: [cash_record*]
+    html: {% if records.sum_amount_gbp._value < 0 %}
+    <font color="#df5555">{{ rendered_value }}</font>
+    {% else %}
+    <font color="#000000">{{ rendered_value }}</font>
+    {% endif %} ;;
   }
   measure: sum_amount_usd {
     type: sum
     sql: ${amount_usd};;
     value_format: "#,##0.00"
     drill_fields: [cash_record*]
-  }
-  measure: count_matched {
-    type: sum
-    sql: ${TABLE}.ActiveStatus;;
-    drill_fields: [cash_record*]
+    html: {% if records.sum_amount_usd._value < 0 %}
+    <font color="#df5555">{{ rendered_value }}</font>
+    {% else %}
+    <font color="#000000">{{ rendered_value }}</font>
+    {% endif %} ;;
   }
 
   set: cash_record {

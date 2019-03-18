@@ -85,4 +85,54 @@ view: running_balance {
     type: count
     drill_fields: []
   }
+
+  measure: sum_net{
+    type: sum
+    label: "Sum Net"
+    value_format: "#,##0.00"
+    html: {% if records.sum_net._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+    sql: ${net};;
+  }
+
+  measure: sum_net_eur{
+    type: sum
+    label: "Sum Net EUR"
+    value_format: "#,##0.00"
+    html: {% if records.sum_net_eur._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+    sql: ${net_eur};;
+  }
+
+  measure: sum_net_gbp{
+    type: sum
+    label: "Sum Net GBP"
+    value_format: "#,##0.00"
+    html: {% if records.sum_net_gbp._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+    sql: ${net_gbp};;
+  }
+
+  measure: sum_net_usd{
+    type: sum
+    label: "Sum Net USD"
+    value_format: "#,##0.00"
+    html: {% if records.sum_net_usd._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+    sql: ${net_usd};;
+  }
+
+
 }

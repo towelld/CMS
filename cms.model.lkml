@@ -9,3 +9,7 @@ include: "*.dashboard"
 explore: records {
   persist_for: "5 minutes"
 }
+
+explore: v_running_balance {
+  persist_for: "5 minutes"
+}

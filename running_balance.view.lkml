@@ -1,4 +1,4 @@
-view: v_running_balance {
+view: running_balance {
   sql_table_name: DemoCms.vRunningBalance ;;
 
   dimension: account_no {

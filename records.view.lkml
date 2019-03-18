@@ -23,6 +23,7 @@ view: records {
   }
 
   dimension: amount_eur {
+    label: "Amount EUR"
     type: number
     sql: ${TABLE}.AmountEUR ;;
     value_format: "#,##0.00"
@@ -34,6 +35,7 @@ view: records {
 }
 
   dimension: amount_gbp {
+    label: "Amount GBP"
     type: number
     sql: ${TABLE}.AmountGBP ;;
     value_format: "#,##0.00"
@@ -45,6 +47,7 @@ view: records {
   }
 
   dimension: amount_usd {
+    label: "Amount USD"
     type: number
     sql: ${TABLE}.AmountUSD ;;
     value_format: "#,##0.00"
@@ -63,21 +66,48 @@ view: records {
   dimension: close_balance {
     type: number
     sql: ${TABLE}.CloseBalance ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: close_balance_eur {
+    label: "Close Balance EUR"
     type: number
     sql: ${TABLE}.CloseBalanceEUR ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: close_balance_gbp {
+    label: "Close Balance GBP"
     type: number
     sql: ${TABLE}.CloseBalanceGBP ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: close_balance_usd {
+    label: "Close Balance USD"
     type: number
     sql: ${TABLE}.CloseBalanceUSD ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: close_type {
@@ -93,21 +123,48 @@ view: records {
   dimension: open_balance {
     type: number
     sql: ${TABLE}.OpenBalance ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: open_balance_eur {
+    label: "Open Balance EUR"
     type: number
     sql: ${TABLE}.OpenBalanceEUR ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: open_balance_gbp {
+    label: "Open Balance GBP"
     type: number
     sql: ${TABLE}.OpenBalanceGBP ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension: open_balance_usd {
+    label: "Open Balance USD"
     type: number
     sql: ${TABLE}.OpenBalanceUSD ;;
+    value_format: "#,##0.00"
+    html: {% if records.amount._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
   }
 
   dimension_group: post {
@@ -140,11 +197,6 @@ view: records {
   dimension: transaction_code {
     type: string
     sql: ${TABLE}.TransactionCode ;;
-  }
-
-  dimension: transaction_status {
-    type: number
-    sql: ${TABLE}.TransactionStatus ;;
   }
 
   measure: count {

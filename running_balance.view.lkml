@@ -20,7 +20,7 @@ view: running_balance {
     type: number
     label: "Net"
     value_format: "#,##0.00"
-    html: {% if running_balance.amount_eur._value < 0 %}
+    html: {% if running_balance.net._value < 0 %}
                 <font color="#df5555">{{ rendered_value }}</font>
           {% else %}
                 <font color="#000000">{{ rendered_value }}</font>
@@ -32,7 +32,7 @@ view: running_balance {
     type: number
     label: "Net EUR"
     value_format: "#,##0.00"
-    html: {% if running_balance.amount_eur._value < 0 %}
+    html: {% if running_balance.net_eur._value < 0 %}
                 <font color="#df5555">{{ rendered_value }}</font>
           {% else %}
                 <font color="#000000">{{ rendered_value }}</font>
@@ -44,7 +44,7 @@ view: running_balance {
     type: number
     label: "Net GBP"
     value_format: "#,##0.00"
-    html: {% if running_balance.amount_eur._value < 0 %}
+    html: {% if running_balance.net_gbp._value < 0 %}
                 <font color="#df5555">{{ rendered_value }}</font>
           {% else %}
                 <font color="#000000">{{ rendered_value }}</font>
@@ -56,7 +56,7 @@ view: running_balance {
     type: number
     label: "Net USD"
     value_format: "#,##0.00"
-    html: {% if records.amount_eur._value < 0 %}
+    html: {% if running_balance.net_usd._value < 0 %}
                 <font color="#df5555">{{ rendered_value }}</font>
           {% else %}
                 <font color="#000000">{{ rendered_value }}</font>
@@ -126,7 +126,7 @@ view: running_balance {
     type: sum
     label: "Sum Net USD"
     value_format: "#,##0.00"
-    html: {% if records.sum_net_usd._value < 0 %}
+    html: {% if running_balance.sum_net_usd._value < 0 %}
                 <font color="#df5555">{{ rendered_value }}</font>
           {% else %}
                 <font color="#000000">{{ rendered_value }}</font>

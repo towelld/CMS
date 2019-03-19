@@ -15,8 +15,8 @@
   - name: currency
     type: field_filter
     model: cms
-    explore: balances
-    field: balances.currency
+    explore: records
+    field: records.currency
     default: USD
 
   elements:

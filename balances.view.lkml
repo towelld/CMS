@@ -88,4 +88,48 @@ view: balances {
     type: count
     drill_fields: []
   }
+
+  measure: sum_close_balance {
+    type: sum
+    sql: ${close_balance};;
+    value_format: "#,##0.00"
+    html: {% if balances.sum_close_balance._value < 0 %}
+                <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+                <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+  }
+  measure: sum_close_balance_eur {
+    label: "Sum Amount EUR"
+    type: sum
+    sql: ${close_balance_eur};;
+    value_format: "#,##0.00"
+    html: {% if balances.sum_close_balance_eur._value < 0 %}
+          <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+          <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+  }
+  measure: sum_close_balance_gbp {
+    label: "Sum Amount GBP"
+    type: sum
+    sql: ${close_balance_gbp};;
+    value_format: "#,##0.00"
+    html: {% if balances.sum_close_balance_gbp._value < 0 %}
+          <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+          <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+  }
+  measure: sum_close_balance_usd {
+    label: "Sum Amount USD"
+    type: sum
+    sql: ${close_balance_usd};;
+    value_format: "#,##0.00"
+    html: {% if balances.sum_close_balance_usd._value < 0 %}
+          <font color="#df5555">{{ rendered_value }}</font>
+          {% else %}
+          <font color="#000000">{{ rendered_value }}</font>
+          {% endif %} ;;
+  }
 }

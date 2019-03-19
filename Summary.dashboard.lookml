@@ -136,7 +136,7 @@
       top: 0
       height: 4
       width: 6
-      title: Subsidiar
+      title: Subsidiary
       model: cms
       explore: balances
       type: looker_pie

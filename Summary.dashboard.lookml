@@ -17,28 +17,6 @@
     model: cms
     explore: balances
     field: balances.subsidiary
-  - name: bank
-    type: field_filter
-    model: cms
-    explore: balances
-    field: balances.bank
-  - name: currency
-    type: field_filter
-    model: cms
-    explore: balances
-    field: balances.currency
-  - name: account_no
-    type: field_filter
-    model: cms
-    explore: balances
-    field: balances.account_no
-  - name: post_date
-    type: field_filter
-    model: cms
-    explore: balances
-    field: balances.post_date
-    default: 2019/02/28
-
 
   elements:
   - name: balance_currency
@@ -52,10 +30,6 @@
     type: looker_pie
     fields: [balances.currency, balances.sum_close_balance_gbp]
     listen:
-      account_no: balances.account_no
-      bank: balances.bank
-      currency: balances.currency
-      post_date: balances.post_date
       subsidiary: balances.subsidiary
     sorts: [balances.sum_close_balance_gbp desc]
     limit: 500
@@ -97,10 +71,6 @@
     type: looker_pie
     fields: [balances.bank, balances.sum_close_balance_gbp]
     listen:
-      account_no: balances.account_no
-      bank: balances.bank
-      currency: balances.currency
-      post_date: balances.post_date
       subsidiary: balances.subsidiary
     sorts: [balances.sum_close_balance_gbp desc]
     limit: 500
@@ -142,10 +112,6 @@
     type: looker_pie
     fields: [balances.subsidiary, balances.sum_close_balance_gbp]
     listen:
-      account_no: balances.account_no
-      bank: balances.bank
-      currency: balances.currency
-      post_date: balances.post_date
       subsidiary: balances.subsidiary
     sorts: [balances.sum_close_balance_gbp desc]
     limit: 500

@@ -11,6 +11,13 @@
     tile_background_color: "#ffffff"
     tile_text_color: "#646569"
 
+  filters:
+  - name: currency
+    type: field_filter
+    model: cms
+    explore: balances
+    field: balances.currency
+
   elements:
     - name: balance_currency
       title: Currency

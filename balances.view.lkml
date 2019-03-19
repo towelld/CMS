@@ -90,6 +90,7 @@ view: balances {
   }
 
   measure: sum_close_balance {
+    label: "Sum Close Balance"
     type: sum
     sql: ${close_balance};;
     value_format: "#,##0.00"
@@ -100,7 +101,7 @@ view: balances {
           {% endif %} ;;
   }
   measure: sum_close_balance_eur {
-    label: "Sum Amount EUR"
+    label: "Sum Close Balance EUR"
     type: sum
     sql: ${close_balance_eur};;
     value_format: "#,##0.00"
@@ -111,7 +112,7 @@ view: balances {
           {% endif %} ;;
   }
   measure: sum_close_balance_gbp {
-    label: "Sum Amount GBP"
+    label: "Sum Close Balance GBP"
     type: sum
     sql: ${close_balance_gbp};;
     value_format: "#,##0.00"
@@ -122,7 +123,7 @@ view: balances {
           {% endif %} ;;
   }
   measure: sum_close_balance_usd {
-    label: "Sum Amount USD"
+    label: "Sum Close Balance USD"
     type: sum
     sql: ${close_balance_usd};;
     value_format: "#,##0.00"

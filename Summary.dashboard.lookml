@@ -11,8 +11,6 @@
     tile_background_color: "#ffffff"
     tile_text_color: "#646569"
 
-  filters:
-
   elements:
     - name: balance_currency
       title: Currency

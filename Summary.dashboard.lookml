@@ -30,6 +30,8 @@
       type: looker_pie
       dimensions: [balances.currency]
       measures: [balances.sum_close_balance_gbp]
+      listen:
+        currency: balances.currency
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
       column_limit: 50

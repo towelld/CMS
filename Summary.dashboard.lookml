@@ -17,6 +17,7 @@
     model: cms
     explore: balances
     field: balances.currency
+    default: USD
 
   elements:
     - name: currency

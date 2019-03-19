@@ -76,11 +76,6 @@ view: running_balance {
     sql: ${TABLE}.Subsidiary ;;
   }
 
-  dimension: time {
-    type: string
-    sql: ${TABLE}.time ;;
-  }
-
   measure: count {
     type: count
     drill_fields: []

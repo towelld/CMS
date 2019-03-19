@@ -12,11 +12,6 @@
     tile_text_color: "#646569"
 
   filters:
-  - name: subsidiary
-    type: field_filter
-    model: cms
-    explore: balances
-    field: balances.subsidiary
 
   elements:
     - name: balance_currency
@@ -29,8 +24,8 @@
       explore: balances
       type: looker_pie
       fields: [balances.currency, balances.sum_close_balance_gbp]
-      listen:
-        subsidiary: balances.subsidiary
+      filters:
+        balances.subsidiary: ''
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
       column_limit: 50

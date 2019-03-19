@@ -28,10 +28,9 @@
       model: cms
       explore: balances
       type: looker_pie
-      dimensions: [balances.currency]
-      measures: [balances.sum_close_balance_gbp]
-      listen:
-        currency: balances.currency
+      fields: [balances.currency, balances.sum_close_balance_gbp]
+      filters:
+        balances.currency: ''
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
       column_limit: 50
@@ -60,4 +59,3 @@
       show_silhouette: false
       totals_color: "#808080"
       series_types: {}
-      inner_radius: 40

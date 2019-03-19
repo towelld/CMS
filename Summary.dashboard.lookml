@@ -19,21 +19,23 @@
     field: balances.currency
 
   elements:
-    - name: balance_currency
+    - name: currency
       title: Currency
-      left: 6
+      type: looker_pie
+      left: 0
       top: 0
       height: 4
       width: 6
       model: cms
       explore: balances
-      type: looker_pie
-      fields: [balances.currency, balances.sum_close_balance_gbp]
-      filters:
-        balances.currency: ''
+      dimensions: [balances.currency]
+      measures: [balances.sum_close_balance_gbp]
+      listen:
+        currency: balances.currency
       sorts: [balances.sum_close_balance_gbp desc]
-      limit: 500
-      column_limit: 50
+      limit: '500'
+      column_limit: '50'
+      query_timezone: Europe/London
       value_labels: legend
       label_type: labPer
       stacking: ''

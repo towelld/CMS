@@ -24,8 +24,6 @@
       explore: balances
       type: looker_pie
       fields: [balances.currency, balances.sum_close_balance_gbp]
-      filters:
-        balances.subsidiary: ''
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
       column_limit: 50

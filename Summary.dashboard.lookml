@@ -87,7 +87,6 @@
       series_types: {}
       inner_radius: 40
 
-  elements:
     - name: banks
       title: Banks (GBP)
       left: 6
@@ -135,7 +134,6 @@
       series_types: {}
       inner_radius: 40
 
-  elements:
     - name: subsidiaries
       title: Subsidiaries (GBP)
       left: 12

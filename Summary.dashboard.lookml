@@ -15,9 +15,8 @@
   - name: currency
     type: field_filter
     model: cms
-    explore: records
-    field: records.currency
-    default: USD
+    explore: balances
+    field: balances.currency
 
   elements:
     - name: currency
@@ -65,4 +64,3 @@
       totals_color: "#808080"
       series_types: {}
       inner_radius: 40
-

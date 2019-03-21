@@ -22,23 +22,23 @@
   elements:
     - name: currency
       title: Currency
-      type: looker_pie
       left: 0
       top: 0
       height: 4
       width: 6
-      model: cms
       explore: balances
-      dimensions: [balances.currency]
-      measures: [balances.sum_close_balance_gbp]
-      listen:
-        currency: balances.currency
+      type: looker_pie
+      fields: [balances.sum_close_balance_gbp, balances.currency]
+      filters:
+        balances.account_no: ''
+        balances.bank: ''
+        balances.currency: ''
+        balances.post_date: 2019/02/28
+        balances.subsidiary: ''
       sorts: [balances.sum_close_balance_gbp desc]
-      limit: '500'
-      column_limit: '50'
-      query_timezone: Europe/London
-      value_labels: legend
-      label_type: labPer
+      limit: 500
+      value_labels: labels
+      label_type: labVal
       stacking: ''
       show_value_labels: false
       label_density: 25
@@ -56,9 +56,13 @@
       show_x_axis_ticks: true
       x_axis_scale: auto
       y_axis_scale_mode: linear
+      show_null_points: true
+      point_style: circle
       ordering: none
       show_null_labels: false
       show_totals_labels: false
       show_silhouette: false
       totals_color: "#808080"
       series_types: {}
+      inner_radius: 40
+

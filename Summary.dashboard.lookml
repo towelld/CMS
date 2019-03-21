@@ -17,6 +17,7 @@
     model: cms
     explore: balances
     field: balances.post_date
+    default_value: 2019/02/18
   - name: subsidiary
     type: field_filter
     model: cms
@@ -47,7 +48,8 @@
       width: 6
       explore: balances
       type: looker_pie
-      fields: [balances.sum_close_balance_gbp, balances.currency]
+      dimensions: [balances.currency]
+      measures: [balances.sum_close_balance_gbp]
       listen:
         account_no: balances.account_no
         bank: balances.bank

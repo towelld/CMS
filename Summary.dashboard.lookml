@@ -41,7 +41,7 @@
 
   elements:
     - name: currency
-      title: Currency (GBP)
+      title: Currency GBP
       left: 0
       top: 0
       height: 4

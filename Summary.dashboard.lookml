@@ -58,8 +58,8 @@
         subsidiary: balances.subsidiary
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
-      value_labels: labels
-      label_type: labVal
+      value_labels: legend
+      label_type: lab
       stacking: ''
       show_value_labels: false
       label_density: 25
@@ -105,8 +105,8 @@
         subsidiary: balances.subsidiary
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
-      value_labels: labels
-      label_type: labVal
+      value_labels: legend
+      label_type: lab
       stacking: ''
       show_value_labels: false
       label_density: 25
@@ -152,8 +152,8 @@
         subsidiary: balances.subsidiary
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
-      value_labels: labels
-      label_type: labVal
+      value_labels: legend
+      label_type: lab
       stacking: ''
       show_value_labels: false
       label_density: 25

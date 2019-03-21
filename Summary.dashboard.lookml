@@ -48,12 +48,12 @@
       explore: balances
       type: looker_pie
       fields: [balances.sum_close_balance_gbp, balances.currency]
-      filters:
-        balances.account_no: ''
-        balances.bank: ''
-        balances.currency: ''
-        balances.post_date: 2019/02/28
-        balances.subsidiary: ''
+      listen:
+        account_no: balances.account_no
+        bank: balances.bank
+        currency: balances.currency
+        post_date: balances.post_date
+        subsidiary: balances.subsidiary
       sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
       value_labels: labels

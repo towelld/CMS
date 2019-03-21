@@ -12,6 +12,16 @@
     tile_text_color: "#646569"
 
   filters:
+  - name: post_date
+    type: field_filter
+    model: cms
+    explore: balances
+    field: balances.post_date
+  - name: subsidiary
+    type: field_filter
+    model: cms
+    explore: balances
+    field: balances.subsidiary
   - name: currency
     type: field_filter
     model: cms
@@ -22,6 +32,11 @@
     model: cms
     explore: balances
     field: balances.account_no
+  - name: bank
+    type: field_filter
+    model: cms
+    explore: balances
+    field: balances.bank
 
   elements:
     - name: currency

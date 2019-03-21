@@ -17,6 +17,11 @@
     model: cms
     explore: balances
     field: balances.currency
+  - name: account_no
+    type: field_filter
+    model: cms
+    explore: balances
+    field: balances.account_no
 
   elements:
     - name: currency

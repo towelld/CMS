@@ -228,14 +228,14 @@
       point_style: circle
       series_types: {}
       inner_radius: 40
-      label_color: ["#B4B4B4"]
+      label_color: ["#FA8D29"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
           showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
           type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
               name: Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
       show_dropoff: false
       series_colors:
-        balances.sum_close_balance_gbp: "#646569"
+        balances.sum_close_balance_gbp: "#FA8D29"
 
 
     - name: banks_bar
@@ -285,7 +285,7 @@
       point_style: circle
       series_types: {}
       inner_radius: 40
-      label_color: ["#B4B4B4"]
+      label_color: ["#646569"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
           showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
           type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
@@ -341,11 +341,11 @@
       point_style: circle
       series_types: {}
       inner_radius: 40
-      label_color: ["#B4B4B4"]
+      label_color: ["#5E8AB4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
           showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
           type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
               name: Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
       show_dropoff: false
       series_colors:
-        balances.sum_close_balance_gbp: "#646569"
+        balances.sum_close_balance_gbp: "#5E8AB4"

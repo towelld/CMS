@@ -192,14 +192,13 @@
       explore: balances
       type: looker_column
       fields: [balances.bank, balances.sum_close_balance_gbp]
-      pivots: [balances.bank]
       listen:
         account_no: balances.account_no
         bank: balances.bank
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc 0, balances.bank]
+      sorts: [balances.sum_close_balance_gbp desc, balances.bank]
       limit: 500
       column_limit: 50
       stacking: ''
@@ -215,7 +214,7 @@
       show_y_axis_ticks: true
       y_axis_tick_density: default
       y_axis_tick_density_custom: 5
-      show_x_axis_label: true
+      show_x_axis_label: false
       show_x_axis_ticks: false
       x_axis_scale: auto
       y_axis_scale_mode: linear
@@ -232,7 +231,9 @@
       inner_radius: 40
       label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
-          showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: 5,
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: BNP, name: BNP,
-              axisId: balances.sum_close_balance_gbp}, {id: Deutsche Bank, name: Deutsche
-                Bank, axisId: balances.sum_close_balance_gbp}]}]
+          showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
+          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
+              name: Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
+      show_dropoff: false
+      series_colors:
+        balances.sum_close_balance_gbp: "#646569"

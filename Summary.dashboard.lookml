@@ -45,7 +45,7 @@
       left: 0
       top: 0
       height: 4
-      width: 6
+      width: 8
       explore: balances
       type: looker_pie
       dimensions: [balances.currency]
@@ -89,10 +89,10 @@
 
     - name: banks_pie
       title: Banks (GBP)
-      left: 6
+      left: 8
       top: 0
       height: 4
-      width: 6
+      width: 8
       explore: balances
       type: looker_pie
       dimensions: [balances.bank]
@@ -136,10 +136,10 @@
 
     - name: subsidiaries_pie
       title: Subsidiaries (GBP)
-      left: 12
+      left: 16
       top: 0
       height: 4
-      width: 6
+      width: 8
       explore: balances
       type: looker_pie
       dimensions: [balances.subsidiary]
@@ -186,7 +186,7 @@
       left: 0
       top: 4
       height: 4
-      width: 6
+      width: 8
       model: cms
       explore: balances
       type: looker_column
@@ -242,10 +242,10 @@
 
     - name: banks_bar
       title: Banks (GBP)
-      left: 6
+      left: 8
       top: 4
       height: 4
-      width: 6
+      width: 8
       model: cms
       explore: balances
       type: looker_column
@@ -302,10 +302,10 @@
 
     - name: subsidiaries_bar
       title: Subsidiaries (GBP)
-      left: 12
+      left: 16
       top: 4
       height: 4
-      width: 6
+      width: 8
       model: cms
       explore: balances
       type: looker_column

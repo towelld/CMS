@@ -56,7 +56,7 @@
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc]
+      sorts: [balances.currency]
       limit: 500
       value_labels: legend
       label_type: lab
@@ -103,7 +103,7 @@
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc]
+      sorts: [balances.bank]
       limit: 500
       value_labels: legend
       label_type: lab
@@ -150,7 +150,7 @@
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc]
+      sorts: [balances.subsidiary]
       limit: 500
       value_labels: legend
       label_type: lab
@@ -190,14 +190,15 @@
       model: cms
       explore: balances
       type: looker_column
-      fields: [balances.currency, balances.sum_close_balance_gbp]
+      fields: [balances.sum_close_balance_gbp, balances.currency]
+      pivots: [balances.currency]
       listen:
         account_no: balances.account_no
         bank: balances.bank
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc, balances.currency]
+      sorts: [balances.sum_close_balance_gbp desc 0, balances.currency]
       limit: 500
       column_limit: 50
       stacking: ''
@@ -228,15 +229,16 @@
       point_style: circle
       series_types: {}
       inner_radius: 40
-      label_color: ["#FA8D29"]
+      label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
           showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
-              name: Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
+          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: AUD, name: AUD,
+              axisId: balances.sum_close_balance_gbp}, {id: CAD, name: CAD, axisId: balances.sum_close_balance_gbp},
+            {id: EUR, name: EUR, axisId: balances.sum_close_balance_gbp}, {id: GBP, name: GBP,
+              axisId: balances.sum_close_balance_gbp}, {id: USD, name: USD, axisId: balances.sum_close_balance_gbp}]}]
       show_dropoff: false
       series_colors:
-        balances.sum_close_balance_gbp: "#FA8D29"
-
+        balances.sum_close_balance_gbp: "#646569"
 
     - name: banks_bar
       title: Banks (GBP)
@@ -248,13 +250,14 @@
       explore: balances
       type: looker_column
       fields: [balances.bank, balances.sum_close_balance_gbp]
+      pivots: [balances.bank]
       listen:
         account_no: balances.account_no
         bank: balances.bank
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc, balances.bank]
+      sorts: [balances.sum_close_balance_gbp desc 0, balances.bank]
       limit: 500
       column_limit: 50
       stacking: ''
@@ -285,14 +288,17 @@
       point_style: circle
       series_types: {}
       inner_radius: 40
-      label_color: ["#646569"]
+      label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
           showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
-              name: Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
+          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: BNP, name: BNP,
+              axisId: balances.sum_close_balance_gbp}, {id: Deutsche Bank, name: Deutsche
+                Bank, axisId: balances.sum_close_balance_gbp}]}]
       show_dropoff: false
       series_colors:
         balances.sum_close_balance_gbp: "#646569"
+
+
 
     - name: subsidiaries_bar
       title: Subsidiaries (GBP)
@@ -303,14 +309,15 @@
       model: cms
       explore: balances
       type: looker_column
-      fields: [balances.subsidiary, balances.sum_close_balance_gbp]
+      fields: [balances.sum_close_balance_gbp, balances.subsidiary]
+      pivots: [balances.subsidiary]
       listen:
         account_no: balances.account_no
         bank: balances.bank
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc, balances.subsidiary]
+      sorts: [balances.sum_close_balance_gbp desc 0, balances.subsidiary]
       limit: 500
       column_limit: 50
       stacking: ''
@@ -341,11 +348,13 @@
       point_style: circle
       series_types: {}
       inner_radius: 40
-      label_color: ["#5E8AB4"]
+      label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
           showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
-              name: Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
+          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: Gresham
+                Europe, name: Gresham Europe, axisId: balances.sum_close_balance_gbp},
+            {id: Gresham North America, name: Gresham North America, axisId: balances.sum_close_balance_gbp},
+            {id: Gresham United Kingdom, name: Gresham United Kingdom, axisId: balances.sum_close_balance_gbp}]}]
       show_dropoff: false
       series_colors:
-        balances.sum_close_balance_gbp: "#5E8AB4"
+        balances.sum_close_balance_gbp: "#646569"

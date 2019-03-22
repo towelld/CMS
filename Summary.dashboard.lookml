@@ -362,7 +362,7 @@
     - name: currencies_ccy_bar
       title: Currencies
       left: 0
-      top: 4
+      top: 8
       height: 4
       width: 8
       model: cms

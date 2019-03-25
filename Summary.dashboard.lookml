@@ -424,65 +424,12 @@
       series_colors:
         balances.sum_close_balance: "#646569"
 
-    - name: balance_area
-      title: Balance (GBP)
+    - name: account_bar
+      title: Account Balance (GBP)
       left: 8
       top: 8
       height: 4
       width: 16
-      model: cms
-      explore: balances
-      type: looker_area
-      fields: [balances.post_date, balances.sum_close_balance_gbp]
-      fill_fields: [balances.post_date]
-      filters:
-        balances.post_date: before 2019/02/28
-      listen:
-        account_no: balances.account_no
-        bank: balances.bank
-        currency: balances.currency
-        subsidiary: balances.subsidiary
-      sorts: [balances.post_date]
-      limit: 500
-      stacking: ''
-      show_value_labels: false
-      label_density: 25
-      legend_position: center
-      x_axis_gridlines: false
-      y_axis_gridlines: true
-      show_view_names: true
-      limit_displayed_rows: false
-      y_axis_combined: true
-      show_y_axis_labels: true
-      show_y_axis_ticks: true
-      y_axis_tick_density: default
-      y_axis_tick_density_custom: 5
-      show_x_axis_label: false
-      show_x_axis_ticks: true
-      x_axis_scale: auto
-      y_axis_scale_mode: linear
-      show_null_points: true
-      point_style: none
-      interpolation: linear
-      show_totals_labels: false
-      show_silhouette: false
-      totals_color: "#808080"
-      ordering: none
-      show_null_labels: false
-      series_types: {}
-      series_colors:
-        balances.sum_close_balance_gbp: "#646569"
-      y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
-          showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: 5,
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
-              name: Balances Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
-
-    - name: account_bar
-      title: Account Balance (GBP)
-      left: 0
-      top: 12
-      height: 4
-      width: 24
       model: cms
       explore: balances
       type: looker_column
@@ -543,3 +490,56 @@
               name: '77716161', axisId: balances.sum_close_balance}]}]
       hide_legend: true
       font_size: 8px
+
+    - name: balance_area
+      title: Balance (GBP)
+      left: 0
+      top: 12
+      height: 4
+      width: 24
+      model: cms
+      explore: balances
+      type: looker_area
+      fields: [balances.post_date, balances.sum_close_balance_gbp]
+      fill_fields: [balances.post_date]
+      filters:
+        balances.post_date: before 2019/02/28
+      listen:
+        account_no: balances.account_no
+        bank: balances.bank
+        currency: balances.currency
+        subsidiary: balances.subsidiary
+      sorts: [balances.post_date]
+      limit: 500
+      stacking: ''
+      show_value_labels: false
+      label_density: 25
+      legend_position: center
+      x_axis_gridlines: false
+      y_axis_gridlines: true
+      show_view_names: true
+      limit_displayed_rows: false
+      y_axis_combined: true
+      show_y_axis_labels: true
+      show_y_axis_ticks: true
+      y_axis_tick_density: default
+      y_axis_tick_density_custom: 5
+      show_x_axis_label: false
+      show_x_axis_ticks: true
+      x_axis_scale: auto
+      y_axis_scale_mode: linear
+      show_null_points: true
+      point_style: none
+      interpolation: linear
+      show_totals_labels: false
+      show_silhouette: false
+      totals_color: "#808080"
+      ordering: none
+      show_null_labels: false
+      series_types: {}
+      series_colors:
+        balances.sum_close_balance_gbp: "#646569"
+      y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
+          showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: 5,
+          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
+              name: Balances Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]

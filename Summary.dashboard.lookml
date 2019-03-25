@@ -435,12 +435,12 @@
       type: looker_column
       fields: [balances.account_no, balances.sum_close_balance_gbp]
       pivots: [balances.account_no]
-      filters:
-        balances.post_date: 2019/02/18
-        balances.currency: EUR
-        balances.subsidiary: ''
-        balances.account_no: ''
-        balances.bank: ''
+      listen:
+        account_no: balances.account_no
+        bank: balances.bank
+        currency: balances.currency
+        post_date: balances.post_date
+        subsidiary: balances.subsidiary
       sorts: [balances.account_no]
       limit: 500
       column_limit: 50

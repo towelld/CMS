@@ -466,46 +466,61 @@
       show_totals_labels: false
       show_silhouette: false
       totals_color: "#808080"
+      show_row_numbers: true
+      truncate_column_names: false
+      hide_totals: false
+      hide_row_totals: false
+      table_theme: editable
+      enable_conditional_formatting: false
+      conditional_formatting_ignored_fields: []
+      conditional_formatting_include_totals: false
+      conditional_formatting_include_nulls: false
+      show_null_points: true
+      point_style: circle
+      interpolation: linear
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
           showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: 5,
           type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: '10292912',
               name: '10292912', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 470}, {id: '10928771', name: '10928771', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 471}, {id: '16365364',
+              __LINE_NUM: 471}, {id: '10928771', name: '10928771', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 473}, {id: '16365364',
               name: '16365364', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 472}, {id: '18178176', name: '18178176', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 473}, {id: '20918174',
+              __LINE_NUM: 474}, {id: '18178176', name: '18178176', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 476}, {id: '20918174',
               name: '20918174', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 474}, {id: '27187161', name: '27187161', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 475}, {id: '28238281',
+              __LINE_NUM: 477}, {id: '27187161', name: '27187161', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 479}, {id: '28238281',
               name: '28238281', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 476}, {id: '29102830', name: '29102830', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 477}, {id: '31202918',
+              __LINE_NUM: 480}, {id: '29102830', name: '29102830', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 482}, {id: '31202918',
               name: '31202918', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 478}, {id: '46161251', name: '46161251', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 479}, {id: '46262711',
+              __LINE_NUM: 483}, {id: '46161251', name: '46161251', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 485}, {id: '46262711',
               name: '46262711', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 480}, {id: '48181713', name: '48181713', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 481}, {id: '49171610',
+              __LINE_NUM: 486}, {id: '48181713', name: '48181713', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 488}, {id: '49171610',
               name: '49171610', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 482}, {id: '52828281', name: '52828281', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 483}, {id: '61515163',
+              __LINE_NUM: 489}, {id: '52828281', name: '52828281', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 491}, {id: '61515163',
               name: '61515163', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 484}, {id: '61717261', name: '61717261', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 485}, {id: '63811333',
+              __LINE_NUM: 492}, {id: '61717261', name: '61717261', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 494}, {id: '63811333',
               name: '63811333', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 486}, {id: '71649134', name: '71649134', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 487}, {id: '71817123',
+              __LINE_NUM: 495}, {id: '71649134', name: '71649134', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 497}, {id: '71817123',
               name: '71817123', axisId: balances.sum_close_balance, __FILE: cms/Summary.dashboard.lookml,
-              __LINE_NUM: 488}, {id: '77716161', name: '77716161', axisId: balances.sum_close_balance,
-              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 489}], __FILE: cms/Summary.dashboard.lookml,
-          __LINE_NUM: 468}]
-      hide_legend: false
+              __LINE_NUM: 498}, {id: '77716161', name: '77716161', axisId: balances.sum_close_balance,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 500}], __FILE: cms/Summary.dashboard.lookml,
+          __LINE_NUM: 469}]
+      hide_legend: true
       font_size: 8px
+      series_types: {}
+
+
 
 
     - name: balance_area
-      title: Balance (GBP)
+      title: February 2019 Running Balance (GBP)
       left: 0
       top: 12
       height: 4
@@ -516,7 +531,7 @@
       fields: [balances.post_date, balances.sum_close_balance_gbp]
       fill_fields: [balances.post_date]
       filters:
-        balances.post_date: before 2019/02/28
+        balances.post_date: before 2019/03/01
       listen:
         account_no: balances.account_no
         bank: balances.bank

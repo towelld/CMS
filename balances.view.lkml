@@ -86,7 +86,7 @@ view: balances {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [balance_record*]
   }
 
   measure: sum_close_balance {
@@ -99,6 +99,7 @@ view: balances {
           {% else %}
                 <font color="#000000">{{ rendered_value }}</font>
           {% endif %} ;;
+    drill_fields: [balance_record*]
   }
   measure: sum_close_balance_eur {
     label: "Sum Close Balance EUR"
@@ -110,6 +111,7 @@ view: balances {
           {% else %}
           <font color="#000000">{{ rendered_value }}</font>
           {% endif %} ;;
+    drill_fields: [balance_record*]
   }
   measure: sum_close_balance_gbp {
     label: "Sum Close Balance GBP"
@@ -121,6 +123,7 @@ view: balances {
           {% else %}
           <font color="#000000">{{ rendered_value }}</font>
           {% endif %} ;;
+    drill_fields: [balance_record*]
   }
   measure: sum_close_balance_usd {
     label: "Sum Close Balance USD"
@@ -132,5 +135,18 @@ view: balances {
           {% else %}
           <font color="#000000">{{ rendered_value }}</font>
           {% endif %} ;;
+    drill_fields: [balance_record*]
   }
+
+  set: balance_record {
+    fields: [
+      subsidiary,
+      bank,
+      currency,
+      account_no,
+      post_date,
+      close_balance
+    ]
+  }
+
 }

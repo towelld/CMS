@@ -17,7 +17,7 @@
     model: cms
     explore: balances
     field: balances.post_date
-    default_value: 2019/02/18
+    default_value: 2019/02/28
   - name: currency
     type: field_filter
     model: cms

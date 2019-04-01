@@ -1,5 +1,5 @@
 - dashboard: summary
-  title: Summary
+  title: Clareti Multi-Bank
   layout: static
   width: 1632
   tile_size: 68

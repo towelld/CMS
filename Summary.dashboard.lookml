@@ -47,7 +47,7 @@
 
   elements:
     - name: currency_pie
-      title: Currencies (GBP)
+      title: Currencies (%)
       left: 0
       top: 0
       height: 4
@@ -95,7 +95,7 @@
       font_size: 8px
 
     - name: banks_pie
-      title: Banks (GBP)
+      title: Banks (%)
       left: 8
       top: 0
       height: 4
@@ -143,7 +143,7 @@
       font_size: 8px
 
     - name: subsidiaries_pie
-      title: Subsidiaries (GBP)
+      title: Subsidiaries (%)
       left: 16
       top: 0
       height: 4

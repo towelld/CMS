@@ -110,7 +110,7 @@
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.bank]
+      sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
       value_labels: legend
       label_type: lab

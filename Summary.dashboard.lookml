@@ -267,7 +267,7 @@
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc 0, balances.bank]
+      sorts: [balances.sum_close_balance_gbp desc]
       limit: 500
       column_limit: 50
       stacking: ''

@@ -92,6 +92,7 @@
       totals_color: "#808080"
       series_types: {}
       inner_radius: 40
+      font_size: 8px
 
     - name: banks_pie
       title: Banks (GBP)
@@ -139,6 +140,7 @@
       totals_color: "#808080"
       series_types: {}
       inner_radius: 40
+      font_size: 8px
 
     - name: subsidiaries_pie
       title: Subsidiaries (GBP)
@@ -186,6 +188,7 @@
       totals_color: "#808080"
       series_types: {}
       inner_radius: 40
+      font_size: 8px
 
     - name: currencies_bar
       title: Currencies (GBP)
@@ -245,6 +248,7 @@
       show_dropoff: false
       series_colors:
         balances.sum_close_balance_gbp: "#646569"
+      font_size: 8px
 
     - name: banks_bar
       title: Banks (GBP)
@@ -303,6 +307,7 @@
       show_dropoff: false
       series_colors:
         balances.sum_close_balance_gbp: "#646569"
+      font_size: 8px
 
 
 
@@ -356,14 +361,17 @@
       inner_radius: 40
       label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
-          showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: Gresham
-                Europe, name: Gresham Europe, axisId: balances.sum_close_balance_gbp},
-            {id: Gresham North America, name: Gresham North America, axisId: balances.sum_close_balance_gbp},
-            {id: Gresham United Kingdom, name: Gresham United Kingdom, axisId: balances.sum_close_balance_gbp}]}]
+            showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: !!null '',
+            type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: Europe,
+                name: Europe, axisId: balances.sum_close_balance_gbp, __FILE: cms/Summary.dashboard.lookml,
+                __LINE_NUM: 360}, {id: North America, name: North America, axisId: balances.sum_close_balance_gbp,
+                __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 362}, {id: United Kingdom,
+                name: United Kingdom, axisId: balances.sum_close_balance_gbp, __FILE: cms/Summary.dashboard.lookml,
+                __LINE_NUM: 363}], __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 358}]
       show_dropoff: false
       series_colors:
         balances.sum_close_balance_gbp: "#646569"
+      font_size: 8px
 
     - name: currencies_ccy_bar
       title: Currencies
@@ -423,6 +431,7 @@
       show_dropoff: false
       series_colors:
         balances.sum_close_balance: "#646569"
+      font_size: 8px
 
     - name: account_bar
       title: Account Balance (GBP)
@@ -571,3 +580,4 @@
           showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: 5,
           type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: balances.sum_close_balance_gbp,
               name: Balances Sum Close Balance GBP, axisId: balances.sum_close_balance_gbp}]}]
+      font_size: 8px

@@ -139,6 +139,17 @@
       totals_color: "#808080"
       series_types: {}
       inner_radius: 40
+      series_colors:
+        Banco Santander: "#57A855"
+        Bank of America: "#6465670"
+        Barclays: "#407FAD"
+        BNP: "#92BAC8"
+        CitiGroup: "#EDC558"
+        Crédit Agricole: "#C54C58"
+        Deutsche Bank: "#B4B4B5"
+        HSBC: "#969bea"
+        JP Morgan Chase: "#db8d46"
+        Standard Chartered: "#92c777"
 
     - name: subsidiaries_pie
       title: Subsidiaries (GBP)

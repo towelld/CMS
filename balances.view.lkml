@@ -151,10 +151,15 @@ view: balances {
   }
   set: records {
     fields: [
+      records.subsidiary,
       records.bank,
       records.account_no,
       records.amount,
-      records.currency
+      records.currency,
+      records.post_time,
+      records.reference1,
+      records.reference2,
+      records.reference3
     ]
   }
 

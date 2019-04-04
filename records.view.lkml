@@ -258,7 +258,7 @@ view: records {
       currency,
       account_no,
       amount,
-      post_date,
+      post_time,
       reference1,
       reference2,
       reference3

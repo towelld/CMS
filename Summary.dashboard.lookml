@@ -211,7 +211,7 @@
       limit: 500
       column_limit: 50
       stacking: ''
-      show_value_labels: true
+      show_value_labels: false
       label_density: 25
       legend_position: center
       x_axis_gridlines: false
@@ -271,7 +271,7 @@
       limit: 500
       column_limit: 50
       stacking: ''
-      show_value_labels: true
+      show_value_labels: false
       label_density: 25
       legend_position: center
       x_axis_gridlines: false

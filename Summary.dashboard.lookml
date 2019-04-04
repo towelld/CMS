@@ -522,7 +522,7 @@
               __LINE_NUM: 498}, {id: '77716161', name: '77716161', axisId: balances.sum_close_balance,
               __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 500}], __FILE: cms/Summary.dashboard.lookml,
           __LINE_NUM: 469}]
-      hide_legend: true
+      hide_legend: false
       font_size: 8px
       series_types: {}
 

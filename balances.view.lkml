@@ -4,6 +4,7 @@ view: balances {
   dimension: account_no {
     type: string
     sql: ${TABLE}.AccountNo ;;
+    drill_fields: [records*]
   }
 
   dimension: bank {
@@ -146,6 +147,14 @@ view: balances {
       account_no,
       post_date,
       close_balance
+    ]
+  }
+  set: records {
+    fields: [
+      records.bank,
+      records.account_no,
+      records.amount,
+      records.currency
     ]
   }
 

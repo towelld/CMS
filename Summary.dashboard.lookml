@@ -267,7 +267,7 @@
         currency: balances.currency
         post_date: balances.post_date
         subsidiary: balances.subsidiary
-      sorts: [balances.sum_close_balance_gbp desc]
+      sorts: [balances.sum_close_balance_gbp desc, balances.bank]
       limit: 500
       column_limit: 50
       stacking: ''
@@ -300,10 +300,13 @@
       inner_radius: 40
       label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
-          showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
-          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: BNP, name: BNP,
-              axisId: balances.sum_close_balance_gbp}, {id: Deutsche Bank, name: Deutsche
-                Bank, axisId: balances.sum_close_balance_gbp}]}]
+          showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: !!null '',
+          type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: Banco
+                Santander, name: Banco Santander, axisId: balances.sum_close_balance_gbp,
+              __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 304}, {id: Crédit Agricole,
+              name: Crédit Agricole, axisId: balances.sum_close_balance_gbp, __FILE: cms/Summary.dashboard.lookml,
+              __LINE_NUM: 305}, {id: Standard Chartered, name: Standard Chartered, axisId: balances.sum_close_balance_gbp}],
+          __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 302}]
       show_dropoff: false
       series_colors:
         balances.sum_close_balance_gbp: "#646569"

@@ -211,7 +211,7 @@
       limit: 500
       column_limit: 50
       stacking: ''
-      show_value_labels: false
+      show_value_labels: true
       label_density: 25
       legend_position: center
       x_axis_gridlines: false
@@ -271,7 +271,7 @@
       limit: 500
       column_limit: 50
       stacking: ''
-      show_value_labels: false
+      show_value_labels: true
       label_density: 25
       legend_position: center
       x_axis_gridlines: false
@@ -300,7 +300,7 @@
       inner_radius: 40
       label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
-          showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: !!null '',
+          showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
           type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: Banco
                 Santander, name: Banco Santander, axisId: balances.sum_close_balance_gbp,
               __FILE: cms/Summary.dashboard.lookml, __LINE_NUM: 304}, {id: Crédit Agricole,
@@ -311,8 +311,6 @@
       series_colors:
         balances.sum_close_balance_gbp: "#646569"
       font_size: 8px
-
-
 
     - name: subsidiaries_bar
       title: Subsidiaries (GBP)
@@ -364,7 +362,7 @@
       inner_radius: 40
       label_color: ["#B4B4B4"]
       y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: left,
-            showLabels: false, showValues: true, tickDensity: default, tickDensityCustom: !!null '',
+            showLabels: false, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
             type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: Europe,
                 name: Europe, axisId: balances.sum_close_balance_gbp, __FILE: cms/Summary.dashboard.lookml,
                 __LINE_NUM: 360}, {id: North America, name: North America, axisId: balances.sum_close_balance_gbp,

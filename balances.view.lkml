@@ -146,7 +146,8 @@ view: balances {
       currency,
       account_no,
       post_date,
-      close_balance
+      close_balance,
+      records.amount
     ]
   }
   set: records {
